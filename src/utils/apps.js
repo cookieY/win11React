@@ -35,23 +35,16 @@ const apps = [
     action: "TASKMANAGER",
   },
   {
-    name: "File Explorer",
+    name: "文件管理",
     icon: "explorer",
     type: "app",
     action: "EXPLORER",
   },
   {
-    name: "Browser",
+    name: "浏览器",
     icon: "edge",
     type: "app",
     action: "MSEDGE",
-  },
-  {
-    name: "Buy me a coffee",
-    icon: "buyme",
-    type: "app",
-    action: "EXTERNAL",
-    payload: "https://www.buymeacoffee.com/blueedgetechno",
   },
   {
     name: "Store",
@@ -60,7 +53,7 @@ const apps = [
     action: "WNSTORE",
   },
   {
-    name: "Recycle Bin",
+    name: "回收站",
     icon: "bin0",
     type: "app",
   },
@@ -278,13 +271,6 @@ const apps = [
     name: "Cortana",
     icon: "cortana",
     type: "app",
-  },
-  {
-    name: "Github",
-    icon: "github",
-    type: "app",
-    action: "EXTERNAL",
-    payload: "https://github.com/blueedgetechno/win11React",
   },
   {
     name: "Unescape",

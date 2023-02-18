@@ -23,22 +23,22 @@ const defState = {
   menus: {
     desk: [
       {
-        name: "View",
+        name: "显示",
         icon: "view",
         type: "svg",
         opts: [
           {
-            name: "Large icons",
+            name: "大图标",
             action: "changeIconSize",
             payload: "large",
           },
           {
-            name: "Medium icons",
+            name: "中图标",
             action: "changeIconSize",
             payload: "medium",
           },
           {
-            name: "Small icons",
+            name: "小图标",
             action: "changeIconSize",
             payload: "small",
             dot: true,
@@ -47,24 +47,24 @@ const defState = {
             type: "hr",
           },
           {
-            name: "Show desktop icons",
+            name: "显示图标",
             action: "deskHide",
             check: true,
           },
         ],
       },
       {
-        name: "Sort by",
+        name: "排序",
         icon: "sort",
         type: "svg",
         opts: [
           {
-            name: "Name",
+            name: "名称",
             action: "changeSort",
             payload: "name",
           },
           {
-            name: "Size",
+            name: "大小",
             action: "changeSort",
             payload: "size",
           },
@@ -76,7 +76,7 @@ const defState = {
         ],
       },
       {
-        name: "Refresh",
+        name: "刷新",
         action: "refresh",
         type: "svg",
         icon: "refresh",
@@ -85,36 +85,24 @@ const defState = {
         type: "hr",
       },
       {
-        name: "New",
+        name: "新建",
         icon: "New",
         type: "svg",
         opts: [
           {
-            name: "Folder",
+            name: "文件夹",
           },
           {
-            name: "Shortcut",
+            name: "文本",
           },
-          {
-            name: "Text Document",
-          },
-          {
-            name: "Compressed (zipped) Folder",
-          },
+        
         ],
       },
       {
         type: "hr",
       },
       {
-        name: "Display settings",
-        icon: "display",
-        type: "svg",
-        action: "SETTINGS",
-        payload: "full",
-      },
-      {
-        name: "Personalize",
+        name: "设置",
         icon: "personalize",
         type: "svg",
         action: "SETTINGS",
@@ -123,18 +111,9 @@ const defState = {
       {
         type: "hr",
       },
+
       {
-        name: "Next desktop background",
-        action: "WALLNEXT",
-      },
-      {
-        name: "Open in Terminal",
-        icon: "terminal",
-        action: "OPENTERM",
-        payload: "C:\\Users\\Blue\\Desktop",
-      },
-      {
-        name: "About",
+        name: "关于",
         action: "DESKABOUT",
         icon: "win/info",
         payload: true,

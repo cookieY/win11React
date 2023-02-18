@@ -4,32 +4,30 @@ var { taskbar, desktop, pinned, recent } = {
   taskbar: (localStorage.getItem("taskbar") &&
     JSON.parse(localStorage.getItem("taskbar"))) || [
     "Settings",
-    "File Explorer",
-    "Browser",
+    "文件管理",
+    "浏览器",
     "Store",
     "Spotify",
   ],
   desktop: (localStorage.getItem("desktop") &&
     JSON.parse(localStorage.getItem("desktop"))) || [
     "Blue",
-    "Unescape",
-    "Recycle Bin",
-    "File Explorer",
+    "回收站",
+    "文件管理",
     "Store",
-    "Browser",
+    "浏览器",
     "Github",
     "Spotify",
     "Buy me a coffee",
   ],
   pinned: (localStorage.getItem("pinned") &&
     JSON.parse(localStorage.getItem("pinned"))) || [
-    "Browser",
+    "浏览器",
     "Get Started",
     "Task Manager",
     "Mail",
     "Settings",
     "Store",
-    "Unescape",
     "Buy me a coffee",
     "Notepad",
     "Whiteboard",

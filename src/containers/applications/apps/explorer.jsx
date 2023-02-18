@@ -4,6 +4,8 @@ import { Icon, Image, ToolBar } from "../../../utils/general";
 import { dispatchAction, handleFileOpen } from "../../../actions";
 import "./assets/fileexpo.scss";
 
+
+
 const NavTitle = (props) => {
   var src = props.icon || "folder";
 
@@ -137,7 +139,7 @@ export const Explorer = () => {
     arr.push(
       <div key={index++} className="dirCont flex items-center">
         <div className="dncont" tabIndex="-1">
-          This PC
+         NextDrive
         </div>
         <Icon className="dirchev" fafa="faChevronRight" width={8} />
       </div>
@@ -182,7 +184,7 @@ export const Explorer = () => {
         app={wnapp.action}
         icon={wnapp.icon}
         size={wnapp.size}
-        name="File Explorer"
+        name="文件管理"
       />
       <div className="windowScreen flex flex-col">
         <Ribbon />
@@ -334,35 +336,13 @@ const NavPane = ({}) => {
   return (
     <div className="navpane win11Scroll">
       <div className="extcont">
-        <Dropdown icon="star" title="Quick access" action="" isDropped>
-          <Dropdown
-            icon="down"
-            title="Downloads"
-            spid="%downloads%"
-            notoggle
-            pinned
-          />
-          <Dropdown icon="user" title="Blue" spid="%user%" notoggle pinned />
-          <Dropdown
-            icon="docs"
-            title="Documents"
-            spid="%documents%"
-            notoggle
-            pinned
-          />
-          <Dropdown title="Github" spid="%github%" notoggle />
-          <Dropdown icon="pics" title="Pictures" spid="%pictures%" notoggle />
-        </Dropdown>
-        <Dropdown icon="onedrive" title="OneDrive" spid="%onedrive%" />
-        <Dropdown icon="thispc" title="This PC" action="" isDropped>
-          <Dropdown icon="desk" title="Desktop" spid="%desktop%" />
-          <Dropdown icon="docs" title="Documents" spid="%documents%" />
-          <Dropdown icon="down" title="Downloads" spid="%downloads%" />
-          <Dropdown icon="music" title="Music" spid="%music%" />
-          <Dropdown icon="pics" title="Pictures" spid="%pictures%" />
-          <Dropdown icon="vid" title="Videos" spid="%videos%" />
-          <Dropdown icon="disc" title="OS (C:)" spid="%cdrive%" />
-          <Dropdown icon="disk" title="Blue (D:)" spid="%ddrive%" />
+        <Dropdown icon="thispc" title="CloudNext" action="" isDropped>
+          <Dropdown icon="desk" title="桌面" spid="%desktop%" />
+          <Dropdown icon="docs" title="文件" spid="%documents%" />
+          <Dropdown icon="music" title="音乐" spid="%music%" />
+          <Dropdown icon="pics" title="图片" spid="%pictures%" />
+          <Dropdown icon="vid" title="视频" spid="%videos%" />
+          <Dropdown icon="disk" title="本地磁盘" spid="%ddrive%" />
         </Dropdown>
       </div>
     </div>
@@ -373,9 +353,14 @@ const Ribbon = ({}) => {
   return (
     <div className="msribbon flex">
       <div className="ribsec">
+        <div className="drdwcont flex" role="button" onClick={() => upload.click()}>
+        <Icon src="sort" ui width={18} margin="0 6px" />
+        <input type="file" name="upload" id="upload" className="hidden" />
+        <span>上传</span>   
+        </div>
         <div className="drdwcont flex">
-          <Icon src="new" ui width={18} margin="0 6px" />
-          <span>New</span>
+        <Icon src="new" ui width={18} margin="0 6px" />
+        <span>新建</span>   
         </div>
       </div>
       <div className="ribsec">
@@ -388,11 +373,7 @@ const Ribbon = ({}) => {
       <div className="ribsec">
         <div className="drdwcont flex">
           <Icon src="sort" ui width={18} margin="0 6px" />
-          <span>Sort</span>
-        </div>
-        <div className="drdwcont flex">
-          <Icon src="view" ui width={18} margin="0 6px" />
-          <span>View</span>
+          <span>排序</span>
         </div>
       </div>
     </div>
